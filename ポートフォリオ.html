@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>地域密着のWebサイト制作 | Portfolio</title>
+  <meta name="description" content="地域密着のWebサイト制作。集客につながるLPを丁寧に制作します。">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0f2747',
+            ink: '#1f2a37',
+            mist: '#f5f8fb'
+          },
+          fontFamily: {
+            sans: ['Noto Sans JP', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-white text-ink antialiased">
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+      <a href="#" class="text-base font-bold tracking-wide text-navy">Portfolio</a>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-slate-600 md:flex">
+        <a href="#about" class="transition hover:text-navy">自己紹介</a>
+        <a href="#works" class="transition hover:text-navy">制作実績</a>
+        <a href="#skills" class="transition hover:text-navy">使用技術</a>
+        <a href="#contact" class="transition hover:text-navy">お問い合わせ</a>
+      </nav>
+      <a href="#contact" class="rounded-md bg-navy px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800">相談する</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-mist">
+      <div class="mx-auto grid min-h-[calc(100vh-73px)] max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-[1.05fr_0.95fr] md:py-20">
+        <div>
+          <p class="mb-4 inline-flex rounded-md border border-slate-300 bg-white px-3 py-1 text-sm font-semibold text-navy">地域のお店・企業向けLP制作</p>
+          <h1 class="text-4xl font-bold leading-tight text-navy sm:text-5xl lg:text-6xl">地域密着のWebサイト制作</h1>
+          <p class="mt-5 text-xl font-semibold leading-relaxed text-slate-700 sm:text-2xl">集客につながるLPを制作します</p>
+          <p class="mt-6 max-w-xl leading-8 text-slate-600">伝えたい魅力を整理し、見る人にわかりやすく届く1ページ構成のWebサイトを丁寧に制作します。</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#works" class="rounded-md bg-navy px-6 py-3 text-center text-sm font-bold text-white transition hover:bg-slate-800">制作実績を見る</a>
+            <a href="#contact" class="rounded-md border border-navy px-6 py-3 text-center text-sm font-bold text-navy transition hover:bg-white">お問い合わせ</a>
+          </div>
+        </div>
+        <div class="relative">
+          <img class="h-[340px] w-full rounded-lg object-cover shadow-xl sm:h-[430px]" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="ノートパソコンと作業デスク">
+          <div class="absolute -bottom-6 left-5 right-5 rounded-lg bg-white p-5 shadow-lg sm:left-8 sm:right-auto sm:w-80">
+            <p class="text-sm font-bold text-navy">丁寧なヒアリング</p>
+            <p class="mt-2 text-sm leading-6 text-slate-600">目的や強みを整理し、地域のお客様に伝わるページ設計を行います。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="px-5 py-20">
+      <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">About</p>
+          <h2 class="mt-3 text-3xl font-bold text-navy">自己紹介</h2>
+        </div>
+        <div class="border-l-4 border-navy bg-mist p-6 md:p-8">
+          <p class="text-lg leading-9 text-slate-700">愛媛県在住。電気設計職として働きながらWeb制作を学習しています。
+設計業務で培った論理的な考え方を活かし、お客様の想いや課題を整理しながら、
+分かりやすく成果につながるWebサイト制作を心掛けています。
+丁寧なコミュニケーションと迅速な対応を大切にし、一つひとつのご依頼に誠実に取り組みます。</p>
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-md bg-white p-5">
+              <p class="font-bold text-navy">強み</p>
+              <p class="mt-2 text-sm leading-6 text-slate-600">電気設計の経験を活かし、情報整理や課題解決を意識したサイト制作を行います。</p>
+            </div>
+            <div class="rounded-md bg-white p-5">
+              <p class="font-bold text-navy">姿勢</p>
+              <p class="mt-2 text-sm leading-6 text-slate-600">ヒアリングを大切にし、お客様が相談しやすいパートナーを目指しています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="works" class="bg-mist px-5 py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">Works</p>
+            <h2 class="mt-3 text-3xl font-bold text-navy">制作実績</h2>
+          </div>
+          <p class="max-w-xl leading-7 text-slate-600">地域ビジネスの魅力が伝わり、問い合わせにつながる構成を意識したLP制作例です。</p>
+        </div>
+
+        <div class="grid gap-7 md:grid-cols-2">
+          <article class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-slate-200">
+            <img class="h-64 w-full object-cover" src="./images/cake.jpg"="ケーキ屋LPのイメージ">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-navy">ケーキ屋LP</h3>
+              <p class="mt-4 leading-7 text-slate-600">季節のケーキや店舗の温かい雰囲気を伝え、来店予約につなげるランディングページです。</p>
+              <div class="mt-5 border-t border-slate-200 pt-5">
+                <p class="text-sm font-bold text-navy">制作ポイント</p>
+                <p class="mt-2 text-sm leading-6 text-slate-600">写真を大きく見せ、商品カテゴリ・おすすめ商品・予約導線をスマートフォンでも見やすく整理しました。</p>
+              </div>
+              <a href="制作LP/ケーキ屋LP.html" class="mt-6 inline-flex w-full items-center justify-center rounded-md bg-navy px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800">サイトを見る</a>
+            </div>
+          </article>
+
+          <article class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-slate-200">
+            <img class="h-64 w-full object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="工務店LPのイメージ">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-navy">工務店LP</h3>
+              <p class="mt-4 leading-7 text-slate-600">施工事例と家づくりへのこだわりを伝え、資料請求や相談につなげるランディングページです。</p>
+              <div class="mt-5 border-t border-slate-200 pt-5">
+                <p class="text-sm font-bold text-navy">制作ポイント</p>
+                <p class="mt-2 text-sm leading-6 text-slate-600">信頼感を重視し、実績・強み・問い合わせまでの流れが自然に伝わる構成にしました。</p>
+              </div>
+              <a href="制作LP/工務店LP.html" class="mt-6 inline-flex w-full items-center justify-center rounded-md bg-navy px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800">サイトを見る</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="px-5 py-20">
+      <div class="mx-auto max-w-6xl">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">Skills</p>
+        <h2 class="mt-3 text-3xl font-bold text-navy">使用技術</h2>
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-md border border-slate-200 p-6">
+            <p class="text-lg font-bold text-navy">HTML</p>
+            <p class="mt-2 text-sm leading-6 text-slate-600">情報構造を意識したマークアップ</p>
+          </div>
+          <div class="rounded-md border border-slate-200 p-6">
+            <p class="text-lg font-bold text-navy">CSS</p>
+            <p class="mt-2 text-sm leading-6 text-slate-600">読みやすく整ったスタイリング</p>
+          </div>
+          <div class="rounded-md border border-slate-200 p-6">
+            <p class="text-lg font-bold text-navy">Tailwind CSS</p>
+            <p class="mt-2 text-sm leading-6 text-slate-600">効率的なレスポンシブ実装</p>
+          </div>
+          <div class="rounded-md border border-slate-200 p-6">
+            <p class="text-lg font-bold text-navy">VS Code</p>
+            <p class="mt-2 text-sm leading-6 text-slate-600">制作環境として使用</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-navy px-5 py-20 text-white">
+      <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-slate-300">Contact</p>
+          <h2 class="mt-3 text-3xl font-bold">お問い合わせ</h2>
+          <p class="mt-5 leading-8 text-slate-200">LP制作やWebサイト制作のご相談をお待ちしています。目的や掲載内容が固まっていない段階でも、お気軽にご相談ください。</p>
+        </div>
+        <form class="rounded-lg bg-white p-6 text-ink shadow-xl md:p-8" action="mailto:example@email.com" method="post" enctype="text/plain">
+          <div class="grid gap-5">
+            <label class="block">
+              <span class="text-sm font-bold text-navy">お名前</span>
+              <input type="text" name="name" class="mt-2 w-full rounded-md border border-slate-300 px-4 py-3 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20" placeholder="山田 太郎" required>
+            </label>
+            <label class="block">
+              <span class="text-sm font-bold text-navy">メールアドレス</span>
+              <input type="email" name="email" class="mt-2 w-full rounded-md border border-slate-300 px-4 py-3 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20" placeholder="example@email.com" required>
+            </label>
+            <label class="block">
+              <span class="text-sm font-bold text-navy">お問い合わせ内容</span>
+              <textarea rows="5" name="message" class="mt-2 w-full rounded-md border border-slate-300 px-4 py-3 outline-none transition focus:border-navy focus:ring-2 focus:ring-navy/20" placeholder="制作したいサイトの内容をご記入ください" required></textarea>
+            </label>
+            <button type="submit" class="rounded-md bg-navy px-6 py-3 text-sm font-bold text-white transition hover:bg-slate-800">メールで送信する</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white px-5 py-6">
+    <p class="text-center text-sm text-slate-500">&copy; 2026 Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
