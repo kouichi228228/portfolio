@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sweet Cake | 毎日に、小さな幸せを。</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#f08a9b",
+                      "on-tertiary-fixed-variant": "#4b4547",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#ffe2d8",
+                      "tertiary-fixed-dim": "#cec4c6",
+                      "tertiary-container": "#afa6a8",
+                      "surface-tint": "#974353",
+                      "secondary-container": "#e5e0cc",
+                      "surface-container-low": "#fff1ec",
+                      "primary-fixed-dim": "#ffb2bd",
+                      "on-secondary-fixed": "#1e1c10",
+                      "on-primary-fixed": "#400013",
+                      "surface-variant": "#ffdbce",
+                      "on-tertiary-fixed": "#1f1a1c",
+                      "on-secondary-container": "#666353",
+                      "on-primary-container": "#6d2233",
+                      "tertiary-fixed": "#eae0e2",
+                      "on-tertiary-container": "#423c3d",
+                      "on-primary-fixed-variant": "#7a2c3d",
+                      "on-surface": "#2b160e",
+                      "on-surface-variant": "#544244",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-highest": "#ffdbce",
+                      "on-error-container": "#93000a",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "inverse-primary": "#ffb2bd",
+                      "surface-bright": "#fff8f6",
+                      "primary": "#974353",
+                      "error": "#ba1a1a",
+                      "on-background": "#2b160e",
+                      "tertiary": "#645d5e",
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#4a4739",
+                      "background": "#fff8f6",
+                      "outline": "#877274",
+                      "inverse-surface": "#432b21",
+                      "surface": "#fff8f6",
+                      "primary-fixed": "#ffd9dd",
+                      "inverse-on-surface": "#ffede7",
+                      "surface-dim": "#fad1c3",
+                      "secondary-fixed-dim": "#ccc6b4",
+                      "secondary": "#625f4f",
+                      "surface-container": "#ffe9e2",
+                      "secondary-fixed": "#e8e2cf",
+                      "outline-variant": "#d9c1c3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "section-gap-mobile": "64px",
+                      "section-gap-desktop": "120px",
+                      "base": "8px",
+                      "margin-desktop": "80px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Playfair Display", "Noto Sans JP"],
+                      "caption": ["Plus Jakarta Sans", "Noto Sans JP"],
+                      "label-lg": ["Plus Jakarta Sans", "Noto Sans JP"],
+                      "body-md": ["Plus Jakarta Sans", "Noto Sans JP"],
+                      "headline-lg": ["Playfair Display", "Noto Sans JP"],
+                      "body-lg": ["Plus Jakarta Sans", "Noto Sans JP"],
+                      "display-md": ["Playfair Display", "Noto Sans JP"],
+                      "headline-lg-mobile": ["Playfair Display", "Noto Sans JP"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "700" }],
+                      "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                      "label-lg": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                      "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                      "body-lg": ["18px", { "lineHeight": "1.8", "fontWeight": "400" }],
+                      "display-md": ["36px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                      "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', 'Noto Sans JP', sans-serif; overflow-x: hidden; }
+        .scallop-top {
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23000' d='M0,160 C120,240 240,240 360,160 C480,80 600,80 720,160 C840,240 960,240 1080,160 C1200,80 1320,80 1440,160 L1440,320 L0,320 Z'%3E%3C/path%3E%3C/svg%3E");
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='M0 60h1440V28.75C1417.65 14.8 1386.35 14.8 1364 28.75 1334.35 47.22 1297.65 47.22 1268 28.75c-22.35-13.95-53.65-13.95-76 0-29.65 18.47-66.35 18.47-96 0-22.35-13.95-53.65-13.95-76 0-29.65 18.47-66.35 18.47-96 0-22.35-13.95-53.65-13.95-76 0-29.65 18.47-66.35 18.47-96 0-22.35-13.95-53.65-13.95-76 0-29.65 18.47-66.35 18.47-96 0-22.35-13.95-53.65-13.95-76 0-29.65 18.47-66.35 18.47-96 0-22.35-13.95-53.65-13.95-76 0-29.65 18.47-66.35 18.47-96 0-22.35-13.95-53.65-13.95-76 0-29.65 18.47-66.35 18.47-96 0-22.35-13.95-53.65-13.95-76 0-29.65 18.47-66.35 18.47-96 0-22.35-13.95-53.65-13.95-76 0-29.65 18.47-66.35 18.47-96 0-22.35-13.95-53.65-13.95-76 0C53.65 14.8 22.35 14.8 0 28.75V60z'/%3E%3C/svg%3E");
+            mask-size: 100% 60px;
+            mask-repeat: no-repeat;
+            padding-top: 60px;
+        }
+        .blob-mask {
+            clip-path: url(#blob-shape);
+        }
+        .line-button { background-color: #06C755; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface">
+<!-- SVG ClipPath for Blob -->
+<svg class="absolute" height="0" width="0">
+<defs>
+<clippath clippathunits="objectBoundingBox" id="blob-shape">
+<path d="M0.85,0.2 C0.95,0.4,0.9,0.7,0.75,0.85 C0.6,1,0.3,1,0.15,0.85 C0,0.7,0,0.4,0.1,0.2 C0.2,0,0.5,-0.1,0.85,0.2"></path>
+</clippath>
+</defs>
+</svg>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-md shadow-sm shadow-primary/5 transition-all duration-300" id="top-app-bar">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="cake">cake</span>
+<div>
+<h1 class="font-display-md text-display-md text-primary leading-none">Sweet Cake</h1>
+<p class="text-[10px] tracking-widest text-on-surface-variant font-medium mt-0.5">スイートケーキ</p>
+</div>
+</div>
+<button class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex flex-col items-center justify-center font-bold text-[10px] hover:scale-105 transition-transform duration-300 shadow-md" onclick="toggleMenu()">
+<span class="material-symbols-outlined mb-0.5" data-icon="menu">menu</span>
+                MENU
+            </button>
+</div>
+</header>
+<!-- Navigation Drawer (Overlay) -->
+<div class="fixed inset-0 z-[60] bg-on-surface/20 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="nav-drawer">
+<div class="fixed inset-y-0 right-0 w-80 bg-surface-container-low shadow-xl flex flex-col p-8 transform translate-x-full transition-transform duration-300 ease-in-out">
+<div class="flex justify-between items-center mb-12">
+<h2 class="font-display-md text-display-md text-primary">Sweet Cake</h2>
+<button class="p-2 hover:bg-primary-container/20 rounded-full transition-colors" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="close">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-full px-6 py-3 font-semibold" href="#home">
+<span class="material-symbols-outlined" data-icon="home">home</span> Home
+                </a>
+<a class="flex items-center gap-4 text-on-surface-variant px-6 py-3 hover:bg-primary-container/50 rounded-full transition-colors" href="#about">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span> About Us
+                </a>
+<a class="flex items-center gap-4 text-on-surface-variant px-6 py-3 hover:bg-primary-container/50 rounded-full transition-colors" href="#menu">
+<span class="material-symbols-outlined" data-icon="cookie">cookie</span> Our Pastries
+                </a>
+<a class="flex items-center gap-4 text-on-surface-variant px-6 py-3 hover:bg-primary-container/50 rounded-full transition-colors" href="#contact">
+<span class="material-symbols-outlined" data-icon="mail">mail</span> Contact
+                </a>
+</nav>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="pt-32 pb-section-gap-mobile md:pb-section-gap-desktop bg-surface-container-low overflow-hidden" id="home">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+<div class="relative order-2 md:order-1">
+<div class="blob-mask w-full aspect-square bg-white shadow-xl shadow-primary/10 flex items-center justify-center relative overflow-hidden group">
+<img alt="Hero Cake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="A beautifully crafted strawberry shortcake with light whipped cream and fresh mint leaves, set against a soft pale pink background with natural sunlight. The aesthetic is high-end, artisanal, and gentle, emphasizing the handmade textures of the cake and the bright, airy atmosphere of an upscale Japanese boutique bakery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr6z_h7UMFdQ1Q4-4woJOh5DUsORxuUHz66Wj9GKzQlKL1eu0Caysf9I8JY088GOLUuLNXRD44i_414TIpbTkCI2ZioDHltMiI37HsLlLHklTicvJKZWTu9aX69X20uUFABZoJwYPBRpBtzqvCbXb5S_C6ytBhW16FeZd67qheu-VkIE-GFcE4jQ7oMZ1_jF7xLGUIDnEr7pbMGvcokYbzTcMMCuHSPn6x8ICfx3b6dZ1Ocpd0FralhXj_R7AM6GiOsC0KHpJLTOJc"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-primary/40 bg-white/40 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-6xl" data-icon="camera">camera</span>
+</div>
+</div>
+<!-- Decorative element -->
+<span class="absolute -top-10 -right-10 material-symbols-outlined text-primary/20 text-8xl rotate-12" data-icon="favorite">favorite</span>
+</div>
+<div class="order-1 md:order-2 space-y-8">
+<div class="space-y-2">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight">
+                        毎日に、<br/><span class="text-primary">小さな幸せを。</span>
+</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                        厳選された素材と、心を込めた手仕事で作り上げる<br/>
+                        日常に寄り添う、やさしい甘さのケーキたち。
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="line-button text-white px-10 py-5 rounded-full font-bold flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                        LINEで予約する
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop" id="about">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 space-y-6">
+<div class="space-y-1">
+<span class="text-primary font-bold tracking-widest text-caption">About Us</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">お店紹介</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-loose">
+                    都会の喧騒から少し離れた場所にある、小さなアトリエ。私たちは「特別な日」はもちろん、何気ない「いつもの日」にも寄り添えるお菓子作りを大切にしています。
+                    <br/><br/>
+                    北海道産の濃厚な生クリーム、農家直送の旬の果実、そして職人の確かな技術。それらが重なり合って生まれる「小さな幸せ」を、ひとつひとつ丁寧にお届けします。
+                </p>
+<button class="bg-primary text-on-primary px-12 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-md">
+                    詳しく見る
+                </button>
+</div>
+<div class="flex-1 flex justify-center relative">
+<div class="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-surface-container-low shadow-xl shadow-primary/10">
+<img alt="Baker at work" class="w-full h-full object-cover" data-alt="A close-up shot of an artisanal pastry chef's hands delicately placing a fresh raspberry atop a cake. The scene is illuminated by warm, soft focus lighting, highlighting the dusting of powdered sugar in the air. The kitchen environment is clean, rustic, and professional, reflecting the brand's handmade and warm aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu2A57_pvRzKdTY4ipFWrT0G5qeN27cThCT35qnu7JH3reNsNO23-Ef0r487drKLEHdiCuhZ-4GXNjmOH7wWmSEwHLJP0SyRG1In5tzOhxIgJlAd3bcIg0lszC4p9RdqBPf5fka46siWiX4Zvn9BoQgmsbM4tM1IRI-uscqek2QJmdm8c8YNgBfGWGw2mnHtvfnSDzk_VZBJPl2EiwLyTfnO3Y7TgzKVBYcaeJH5aFiMtlDUQKtMYkxjWLjefqwrVcWosDAYKeQ2Pt"/>
+</div>
+<!-- Hand-drawn flourish -->
+<span class="absolute -bottom-8 -left-8 material-symbols-outlined text-primary-container text-7xl opacity-50" data-icon="eco">eco</span>
+</div>
+</div>
+</section>
+<!-- Birthday Cake Section -->
+<section class="scallop-top bg-surface-container-low py-section-gap-mobile md:py-section-gap-desktop relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 order-2 md:order-1 space-y-8">
+<div class="space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-primary">特別な日を、彩る一台。</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        お誕生日や記念日、大切な方への贈りものに。<br/>
+                        世界にひとつだけのオーダーメイドケーキも承ります。
+                    </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary font-bold" data-icon="check_circle">check_circle</span>
+                            季節のフルーツをたっぷり使用
+                        </li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary font-bold" data-icon="check_circle">check_circle</span>
+                            メッセージプレート無料
+                        </li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary font-bold" data-icon="check_circle">check_circle</span>
+                            アレルギー対応のご相談も可能
+                        </li>
+</ul>
+</div>
+<button class="bg-primary text-on-primary px-12 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-lg flex items-center gap-2">
+                    ご予約はこちら
+                    <span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+</button>
+</div>
+<div class="flex-1 order-1 md:order-2 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden bg-white shadow-2xl relative group">
+<img alt="Celebration Cake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A grand three-tier celebration cake decorated with white cream rosettes, fresh berries, and delicate edible gold leaf. The background is a soft-focus studio setting with warm beige tones. The lighting is elegant and celebratory, portraying the cake as a premium, artisan masterpiece for a special occasion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwwrzOJIVenLS400VH8xQlu9Vqpg50Egf5cjN8g7XSiI5cKj3vNf9EQ6TqsQ-eYd7iDj0XtvpbGE7Q26m56OT03OcLPl5k4FxWfeW5BVV8tcLCCTUjlgBYHMCo9psEEZX0AVZIJRXjGMH7Oe8N7k5fhvdJ5DBvypTjL-G0HiBjgimwuY7KQ4GGbsgiH2LNXFm8jPHYC29fWUwEfLDKdD1PSETifXPQ0RdV6LV37WGrtaEzGBlhC_eIIeqj5sq6HE87WP5gm47OLvQi"/>
+<div class="absolute -top-4 -right-4 w-24 h-24 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container font-bold rotate-12 shadow-lg border-4 border-white">
+                        Special
+                    </div>
+</div>
+<!-- Ribbon Ornament -->
+<div class="absolute -bottom-10 -left-10 w-40 h-40 opacity-20 text-primary">
+<span class="material-symbols-outlined text-[160px]" data-icon="featured_seasonal">feature_search</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Section -->
+<section class="scallop-top bg-surface-bright py-section-gap-mobile md:py-section-gap-desktop" id="menu">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<div class="space-y-1 mb-16">
+<span class="text-primary font-bold tracking-widest text-caption">Our Pastries</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">おすすめメニュー</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+<!-- Menu Card 1 -->
+<div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container mb-4">
+<img alt="Shortcake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A classic slice of strawberry shortcake with fluffy sponge and thick layers of cream, presented on a delicate porcelain plate. The photography is bright and high-key, using soft morning light to create a fresh, appetizing look typical of a premium pastry shop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkC0QUU7DJnRf25XWyMzr717TmPuKnX8bcIO6wm3kpzoo6aZh9frlYE-M6mDw4EAY8D8LiMbJ_mUDkwQIliAr_nWchoOtCj4HcjLMhaAAOkYYauHD8o4MKZnhRVOfBYO4M_1wZCE3lF4WqKQziSa0MiLZyK9N23_aUjU_EvDPO-vd3pYJvnmDm1lthBIigNp9fAoIXfSkifpghFVFcwBxKny7uU1GUivk04CJCNpWOQA_oLbqpv-maUNGp2Htjtxf7HsiJLSi8xgIa"/>
+</div>
+<h3 class="font-bold text-on-surface">苺のショートケーキ</h3>
+<p class="text-primary font-bold mt-2">¥680</p>
+<span class="inline-block mt-3 px-3 py-1 bg-surface-container-low text-[10px] rounded-full text-on-surface-variant">Popular</span>
+</div>
+<!-- Menu Card 2 -->
+<div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container mb-4">
+<img alt="Mont Blanc" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A sophisticated Mont Blanc pastry with intricate chestnut cream swirls and a whole candied chestnut on top. The mood is rich and autumnal, featuring deep browns and warm cream colors in a soft-focus setting that highlights the delicate craftsmanship of the dessert." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCexCg0_B-43AIL52bKwL5EEHsBscG1qgcEZyyAUYzR2J1zaniDGF8a8RvTGVf7GLnxbTug8LmREUmUPOffncN7G95AgsSJZSaCLZs2Ll2jYNt2kKvnKRDBxUNvFkn8CDLxaKx1tVOuY2QKCqf9JyWBc9DMO3hsc9RUhTPplEwPXfTXP_brZkEwH972lI5D1wfr_cQlOZAtBX0VSTvLx6xbAwnRXZhEHBz5u1BEqvyWT349M__2ne4aFvjqzqux2N1kM-_9Hx-3FZH6"/>
+</div>
+<h3 class="font-bold text-on-surface">和栗のモンブラン</h3>
+<p class="text-primary font-bold mt-2">¥750</p>
+<span class="inline-block mt-3 px-3 py-1 bg-surface-container-low text-[10px] rounded-full text-on-surface-variant">Seasonal</span>
+</div>
+<!-- Menu Card 3 -->
+<div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container mb-4">
+<img alt="Cheesecake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A slice of creamy, baked cheesecake with a golden-brown top and a crumbly biscuit base. The aesthetic is minimalist and clean, using neutral beige and white tones to emphasize the smooth, dense texture of the cheesecake in a high-end cafe style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB368kZ2bkQUIcChq5XjFGKIjesn65DtwZv2tzIc6pcgaAUYf_WuQPRWDGIkz5VeSrxUx_nblxPLSoNzzcFdagbv0VZY_0ddmLtncV3XoCU7xduFeho6w3NF7lWJv2JJlNKkCv3HP-9xzpFHOG_4zU6iVTXGkEKWSzKtkW1M8xGk5NyY77e1vzFc2ujlB9CkR5x496wLLJO0NKrYX0tJbVeYYi1WaxKRkNcvMAABYSrtnE3zkcwG2-HrX3tIOcqSGND6gLylPFEgjed"/>
+</div>
+<h3 class="font-bold text-on-surface">濃厚チーズケーキ</h3>
+<p class="text-primary font-bold mt-2">¥620</p>
+<span class="inline-block mt-3 px-3 py-1 bg-surface-container-low text-[10px] rounded-full text-on-surface-variant">Classic</span>
+</div>
+<!-- Menu Card 4 -->
+<div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container mb-4">
+<img alt="Cream Puff" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A decadent cream puff filled with rich vanilla bean custard, lightly dusted with powdered sugar. The close-up photography captures the crispy texture of the choux pastry and the luscious cream inside, set against a warm, artisanal backdrop with soft-focus kitchen tools." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiRI4OcPdx_Oyrdt1VBDoGrjN2j_brbZZljcgnVtgl9umQtG9ZYisJHVyyVLz0RMv8dbduymdbSkPsGGPZa5PWD7vt-QOCYdTbGERFlF_ZF_4dCJj5I5GzWYfzcgWENFbtMzmFP9mTDYVEMmycIddibUK--5m8kwlCLKvV2BEEce8uUEidVPXOfIvSWOv4lsLH7iKUwCHAkm6rIYsKKAHGHtzDtFCqcZ0rr7GD52cZ77JvyXwf_E427osFZGsH063i-2pbR275EOgZ"/>
+</div>
+<h3 class="font-bold text-on-surface">こだわりシュークリーム</h3>
+<p class="text-primary font-bold mt-2">¥350</p>
+<span class="inline-block mt-3 px-3 py-1 bg-surface-container-low text-[10px] rounded-full text-on-surface-variant">Daily</span>
+</div>
+</div>
+<button class="border-2 border-primary text-primary px-12 py-4 rounded-full font-bold hover:bg-primary hover:text-white transition-all shadow-sm">
+                すべてのメニューを見る
+            </button>
+</div>
+</section>
+<!-- Instagram Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-white">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="space-y-1">
+<h2 class="font-display-md text-display-md text-on-surface">Instagram</h2>
+<p class="text-on-surface-variant">お店の日常や新作情報を更新中</p>
+</div>
+<a class="bg-surface-container px-8 py-3 rounded-full font-bold text-on-surface flex items-center gap-2 hover:bg-primary-container/20 transition-colors" href="#">
+                    Follow Us
+                    <span class="material-symbols-outlined text-lg" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden group">
+<img alt="Insta 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A curated Instagram-style flat lay of colorful macarons on a marble surface, surrounded by rose petals. The lighting is bright and feminine, with a focus on pastel colors and soft textures, fitting the brand's gentle and cute visual identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFwLU51re15HOQ_vIm8N8R_deGHbsAD1OD7o5Gw6WEPybEtnMYMwejWSPrHHb5S0UpH9zqG9FqwHHI4SY_dclIt7IbLuI_eAzKaD2ZQr0tnWeBd8B6h1TA-07qUInf9UbAjLpRGo95P9bPa8Cm7NsBAWhjso03ZhjaGkL_ddR6Ntd12cdg2qX4NF_vTlcWg4wedZ8t7eNAPjrdSKn-orrnGePlBDygOfK0ilQ-nFdD6yzfitUhehBQX5LZu1UPVXvP2CpoGkhzo0hq"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden group">
+<img alt="Insta 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A photo of a cozy bakery interior with wooden shelves displaying freshly baked cupcakes and scones. The mood is warm and welcoming, captured in a warm, low-contrast style that feels artisanal and boutique." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkXOQ7r8mWw9X7UenFCvkGnTNDWKbHy-EOps1YuIA3GqH7KqbQ_pmCQJ5Ugo4qp-VZ9q9S-8iBkDxY9b7MGFNQ4GZx90x-mC-xzpSf4bmWgOi6eB1U8UNlHX6AqWmbgnuhrW_I_QEoKNXKSGfw9t9HEZzct9O2mUaOfXAtPolM-5-YyoJXPlT4bcG7WNsH4KUEwSmI9gLHhw4y8sxPBdG5FupPOSTAuCHfxMyqFlHS1k-IH_-Cg6B-Uusg-ugppzFO4qMLXEHzk_Nv"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden group">
+<img alt="Insta 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A close-up of a beautifully wrapped gift box from Sweet Cake, featuring a delicate pink ribbon and a hand-drawn botanical tag. The setting is clean and high-end, emphasizing the care and detail that goes into every customer's purchase." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaRcL4KYXgOxuKBsWIDSJ9GA70021Ko5-_0yVbUGso8F6uO6agXrS6PsdOHhVsuuh2Q5pBmw3nQUjWrSuXm-gwYl5aWWKDRtataSOm83-ucUj0AXIJAhRbHNQpmLKXgO9oDVeNFIzlxu4olnLc0IBlEuA9hn9IOSwTZ4PFJ7XFglrIEeWm6EiQr51zakKX4cG5Wt4Gcdd9v8a_s1fVEbPe-nKx4_JKdilG-6GyitpkBSjdLaBj8Vhv4rgWsZ5960ggtRU3h_f23QMX"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden group">
+<img alt="Insta 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A slice of cake on a rustic wooden table with a cup of coffee next to it. Soft sunlight streams in from a window, creating a peaceful 'small happiness' moment typical of the brand's mission." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC0DOHTdYB5BHR9J4xgWD4Hs_afn1LYOx526-s4e8Mx7haUE7ghz3Y8xNMquDBe_lHCVQd_xI87MszLmE-R7_ikZeA4V73-IyVz4GFAse8EdKjpVrLpNbrlEY5bbYgg0H9jFe_iUagi9BrPm8jwxC7rkGDGTT99magAx6cSMR9cBbt92LmWp0vMcYiub8i98AozOWGQ_bLYueI9ChnFtmIhofIkGwpiBdC_G9Df14gsBfoXMdiQ3Z6DxmQSZHJdBE2CtGPTCFe_k4G"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden group hidden md:block">
+<img alt="Insta 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A top-down shot of a pastry chef piping intricate designs onto a batch of cookies. The aesthetic is clean and white-dominated with soft pink accents, showcasing the handmade process and artisanal quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbEdL47cf0XwuOPMsZN2dX5wxMwX-SPFLkHT3nHLijx3UVaaZAUuGSj5Nf4CSLrScfaAmDuHhRezUy9nyj-3Kz28X-zFAkxPxNJSsDR0E6CCTHx7SP0oOoOkVGozpAH8t9pJWTQ3T1Y2iC2ixKU9RPeek189ZHJklb0gUIYJ-CrzfgKqtJzxGQnQ2vP8iiOe-i1AOm_xom8UwITEpKePp1do7XQgHBfY2LZhAp7MXP-y86RrMXopl_m0UKsev4JyE_BtIBBO6E45Nq"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Store Info Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-low" id="store">
+  <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+
+    <div class="text-center mb-12">
+      <span class="text-primary font-bold tracking-widest text-caption">
+        Store Information
+      </span>
+      <h2 class="font-headline-lg text-headline-lg text-on-surface">
+        店舗情報・アクセス
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+
+      <!-- 店舗写真 -->
+      <div class="rounded-xl overflow-hidden shadow-lg">
+        <img
+          src="https://images.unsplash.com/photo-1554118811-1e0d58224f24"
+          alt="店舗外観"
+          class="w-full h-full object-cover"
+        >
+      </div>
+
+      <!-- 店舗情報 -->
+      <div class="space-y-6">
+
+        <div>
+          <h3 class="font-bold text-xl mb-2">Sweet Cake 新居浜店</h3>
+          <p class="text-on-surface-variant">
+            愛媛県新居浜市○○町1-2-3
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-2">営業時間</h4>
+          <ul class="space-y-1 text-on-surface-variant">
+            <li>月〜金：10:00〜19:00</li>
+            <li>土日祝：10:00〜18:00</li>
+            <li>定休日：火曜日</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-2">TEL</h4>
+          <p class="text-on-surface-variant">
+            0897-00-0000
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Google Map -->
+    <div class="mt-12 rounded-xl overflow-hidden shadow-lg">
+      <iframe
+        src="https://www.google.com/maps?q=新居浜駅&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+<!-- LINE Integration Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-gradient-to-br from-white to-[#E7F8ED]">
+<div class="max-w-5xl mx-auto px-margin-mobile md:px-margin-desktop bg-white rounded-3xl p-12 md:p-20 shadow-xl shadow-primary/5 flex flex-col md:flex-row items-center gap-16 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5 text-[#06C755]">
+<span class="material-symbols-outlined text-[200px]" data-icon="chat">chat</span>
+</div>
+<div class="flex-1 space-y-8 z-10">
+<div class="flex items-center gap-4">
+<img alt="LINE" class="w-16 h-16" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpr0KW-juhuwQiR5d0opJpO9wBixSRf3HWv2ytx32MZzeVdIUMOJdGfH0ez8mGLZ6wXlVg3F4ICQKoq6gMUuFXmhjJ4OUqucV_Pz-_A5EN1xNs-qk-lqTt-BPn-HLtJxkj5xVMqOX0GrDB5njUF7rGy8vCSj1B38h9uVf9VRybKa5h3dLLWLMZsSjh9v4hqpLJLbEY9JLUdPcqc2KTuR1J8Wc4KfuvXE9ECfXAKuruEBEsxDIilNYtI9q_QldKYQ0PfkRf29P3-iwL"/>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">公式LINEでお得に</h2>
+</div>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#06C755]" data-icon="verified">verified</span>
+                        トーク画面から簡単に予約OK
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#06C755]" data-icon="verified">verified</span>
+                        限定クーポン＆新作情報を配信
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#06C755]" data-icon="verified">verified</span>
+                        スタンプカードで特典ゲット
+                    </li>
+</ul>
+<button class="line-button text-white w-full py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg flex items-center justify-center gap-3">
+                    友だち追加する
+                    <span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</button>
+</div>
+<div class="flex-1 z-10 flex justify-center">
+<div class="w-64 aspect-[9/16] bg-on-surface rounded-[2.5rem] p-3 shadow-2xl relative overflow-hidden">
+<div class="w-full h-full bg-white rounded-[2rem] overflow-hidden flex flex-col items-center p-6 text-center">
+<div class="w-16 h-16 bg-surface-container rounded-full mb-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="cake">cake</span>
+</div>
+<h4 class="font-bold text-xs mb-2">Sweet Cake</h4>
+<div class="flex-1 w-full bg-surface-container-low rounded-xl p-3 flex flex-col gap-2">
+<div class="h-4 bg-primary-container/20 rounded w-3/4"></div>
+<div class="h-4 bg-primary-container/20 rounded w-1/2"></div>
+<div class="mt-auto h-8 bg-[#06C755] rounded-full w-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-low" id="contact">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16">
+<div class="space-y-6">
+<div class="space-y-1">
+<span class="text-primary font-bold tracking-widest text-caption">Contact</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">お問い合わせ</h2>
+</div>
+<p class="text-on-surface-variant leading-loose">
+                    ホールケーキのご予約、取材のご依頼、その他ご質問などがございましたら、こちらのフォームよりお気軽にお問い合わせください。
+                </p>
+<div class="space-y-4 pt-8">
+<div class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+                        0897-00-0000
+                    </div>
+<div class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+                        info@sweetcake.example.com
+                    </div>
+</div>
+</div>
+<form class="space-y-6 bg-white p-8 md:p-12 rounded-xl shadow-sm" id="contact-form" onsubmit="handleContact(event)">
+<div class="space-y-2">
+<label class="text-caption font-bold text-on-surface-variant block">お名前</label>
+<input class="w-full bg-surface-bright border-none focus:ring-2 focus:ring-primary-container rounded-lg p-4 transition-all" placeholder="山田 太郎" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-caption font-bold text-on-surface-variant block">メールアドレス</label>
+<input class="w-full bg-surface-bright border-none focus:ring-2 focus:ring-primary-container rounded-lg p-4 transition-all" placeholder="example@mail.com" required="" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-caption font-bold text-on-surface-variant block">お問い合わせ内容</label>
+<textarea class="w-full bg-surface-bright border-none focus:ring-2 focus:ring-primary-container rounded-lg p-4 transition-all" placeholder="ご質問やメッセージをご記入ください" required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 rounded-full font-bold hover:scale-[1.02] transition-all shadow-lg" type="submit">
+                    送信する
+                </button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-inverse-surface text-inverse-on-surface pt-section-gap-mobile pb-12">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-surface-container-low text-4xl" data-icon="cake">cake</span>
+<h2 class="font-display-md text-display-md text-surface-container-low leading-none">Sweet Cake</h2>
+</div>
+<p class="text-surface-variant text-sm leading-loose">
+                        〒123-4567<br/>
+                        愛媛県新居浜市○○町1-2-3<br/>
+                        Sweet Cake 新居浜店
+                    </p>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold border-b border-surface-variant/20 pb-2">Business Hours</h4>
+<ul class="text-surface-variant text-sm space-y-2">
+<li class="flex justify-between"><span>営業時間</span><span>10:00 - 19:00</span></li>
+<li class="flex justify-between"><span>定休日</span><span>火曜日</span></li>
+<li class="flex justify-between"><span>TEL</span><span>0897-00-0000</span></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold border-b border-surface-variant/20 pb-2">Follow Us</h4>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-full border border-surface-variant/30 flex items-center justify-center hover:bg-primary-container hover:text-on-primary-container transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="camera">camera</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-surface-variant/30 flex items-center justify-center hover:bg-[#06C755] hover:border-[#06C755] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</a>
+</div>
+<div class="flex flex-wrap gap-x-6 gap-y-2 text-xs text-surface-variant">
+<a class="hover:text-primary-fixed-dim underline decoration-transparent hover:decoration-primary-fixed-dim transition-all" href="#">Privacy Policy</a>
+<a class="hover:text-primary-fixed-dim underline decoration-transparent hover:decoration-primary-fixed-dim transition-all" href="#">Terms of Service</a>
+<a class="hover:text-primary-fixed-dim underline decoration-transparent hover:decoration-primary-fixed-dim transition-all" href="#">Order Tracking</a>
+</div>
+</div>
+</div>
+<div class="text-center pt-8 border-t border-surface-variant/10 text-[10px] tracking-widest text-surface-variant opacity-60">
+                © 2024 Sweet Cake Artisanal Pastries. All rights reserved.
+            </div>
+</div>
+</footer>
+<script>
+        function toggleMenu() {
+            const drawer = document.getElementById('nav-drawer');
+            const inner = drawer.querySelector('div');
+            const isOpening = drawer.classList.contains('pointer-events-none');
+            
+            if (isOpening) {
+                drawer.classList.remove('pointer-events-none', 'opacity-0');
+                inner.classList.remove('translate-x-full');
+            } else {
+                drawer.classList.add('opacity-0');
+                inner.classList.add('translate-x-full');
+                setTimeout(() => {
+                    drawer.classList.add('pointer-events-none');
+                }, 300);
+            }
+        }
+
+        function handleContact(event) {
+            event.preventDefault();
+            alert("お問い合わせありがとうございます。担当者より追ってご連絡させていただきます。");
+            event.target.reset();
+        }
+
+        // Header transparency on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('top-app-bar');
+            if (window.scrollY > 20) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4', 'shadow-sm');
+            } else {
+                header.classList.add('py-4', 'shadow-sm');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    toggleMenu(); // Close drawer if open
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>

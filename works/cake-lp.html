@@ -1,0 +1,1022 @@
+<!DOCTYPE html><html lang="ja" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>杉の杜工務店 | 愛媛県東予・中予エリアの注文住宅・リフォーム</title>
+<style>
+    :root {
+      color-scheme: light;
+      --ink: #243a36;
+      --muted: #66736f;
+      --line: #e4ebe7;
+      --paper: #ffffff;
+      --soft: #f6f8f5;
+      --green: #255b50;
+      --green-2: #6f9388;
+      --gold: #b9853e;
+      --cream: #f4efe3;
+      --line-green: #06C755;
+      --shadow: 0 14px 34px rgba(23, 50, 45, .12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: #edf1ed;
+      color: var(--ink);
+      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .site {
+      max-width: 430px;
+      margin: 0 auto;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px rgba(36, 58, 54, .05);
+    }
+
+    @media (min-width: 768px) {
+      .site {
+        max-width: 1000px;
+      }
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 18px;
+      background: rgba(255, 255, 255, .94);
+      border-bottom: 1px solid rgba(228, 235, 231, .9);
+      backdrop-filter: blur(12px);
+    }
+
+    @media (min-width: 768px) {
+      .header {
+        padding: 16px 40px;
+      }
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 auto;
+      border: 2px solid var(--green);
+      border-radius: 50%;
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    .brand-name {
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .brand-sub {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1;
+    }
+
+    @media (min-width: 768px) {
+      .brand-name { font-size: 18px; }
+      .brand-sub { font-size: 12px; }
+    }
+
+    .menu-button {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      gap: 4px;
+    }
+
+    .menu-button span,
+    .menu-button::before,
+    .menu-button::after {
+      content: "";
+      width: 18px;
+      height: 2px;
+      background: var(--green);
+      border-radius: 999px;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 600px;
+      padding: 28px 18px 26px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .10), #fff 80%), var(--soft);
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 40px;
+        padding: 60px 40px;
+        min-height: 700px;
+      }
+    }
+
+    .hero-photo {
+      position: relative;
+      height: 292px;
+      margin: 0 -18px;
+      overflow: hidden;
+      background: #e9eee9;
+    }
+
+    @media (min-width: 768px) {
+      .hero-photo {
+        flex: 1;
+        height: 500px;
+        margin: 0;
+        border-radius: 12px;
+      }
+    }
+
+    .hero-photo img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-photo::after {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background: linear-gradient(180deg, rgba(20, 44, 40, .05), rgba(20, 44, 40, .48));
+    }
+
+    .hero-label {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 11px;
+      background: rgba(255, 255, 255, .94);
+      border-radius: 6px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .12);
+    }
+
+    .hero-copy {
+      position: relative;
+      margin-top: -38px;
+      padding: 24px 18px 20px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    @media (min-width: 768px) {
+      .hero-copy {
+        flex: 1;
+        margin-top: 0;
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    h1 {
+      margin: 13px 0 0;
+      font-size: clamp(34px, 8vw, 44px);
+      line-height: 1.14;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 15px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-actions {
+        width: 320px;
+      }
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 800;
+      text-align: center;
+      transition: opacity 0.2s;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+    }
+
+    .button.primary {
+      background: var(--green);
+      color: #fff;
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
+
+    .button.line {
+      background: var(--line-green);
+      color: #fff;
+      gap: 8px;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .trust {
+      padding: 12px 6px;
+      background: var(--soft);
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .trust strong {
+      display: block;
+      color: var(--green);
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .trust span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.35;
+    }
+
+    section {
+      padding: 52px 18px;
+      background: #fff;
+    }
+
+    @media (min-width: 768px) {
+      section {
+        padding: 80px 40px;
+      }
+    }
+
+    section.soft {
+      background: var(--soft);
+    }
+
+    .section-head {
+      margin-bottom: 22px;
+    }
+
+    @media (min-width: 768px) {
+      .section-head {
+        margin-bottom: 40px;
+        text-align: center;
+      }
+    }
+
+    .section-kicker {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 8px 0 0;
+      font-size: 26px;
+      line-height: 1.34;
+      letter-spacing: 0;
+    }
+
+    @media (min-width: 768px) {
+      h2 { font-size: 32px; }
+    }
+
+    .section-text {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    @media (min-width: 768px) {
+      .section-text {
+        max-width: 600px;
+        margin: 14px auto 0;
+      }
+    }
+
+    .about-content {
+      display: grid;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+    }
+
+    .about-photo {
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      aspect-ratio: 16 / 11;
+      background: #e8eee9;
+    }
+
+    .about-photo img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .message {
+      padding-left: 16px;
+      border-left: 3px solid var(--gold);
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.8;
+    }
+
+    .service-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .service-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+
+    .service-card {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 14px;
+      align-items: center;
+      min-height: 104px;
+      padding: 16px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    @media (min-width: 768px) {
+      .service-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 30px 20px;
+      }
+      .service-icon { margin: 0 auto; }
+    }
+
+    .service-icon {
+      display: grid;
+      place-items: center;
+      width: 56px;
+      height: 56px;
+      background: var(--cream);
+      border-radius: 6px;
+      color: var(--green);
+      font-size: 25px;
+      font-weight: 900;
+    }
+
+    .service-card h3 {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .service-card p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .works {
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .works {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+    }
+
+    .work-card {
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 10px 24px rgba(23, 50, 45, .08);
+    }
+
+    .work-card img {
+      height: 190px;
+      object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+      .work-card img { height: 260px; }
+    }
+
+    .work-body {
+      padding: 15px;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 5px 9px;
+      background: var(--soft);
+      border-radius: 999px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .work-body h3 {
+      margin: 10px 0 0;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .work-body p {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    /* Voices Section */
+    .voices-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .voices-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+    }
+
+    .voice-card {
+      padding: 24px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .voice-profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .voice-avatar {
+      width: 48px;
+      height: 48px;
+      background: var(--cream);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .voice-info {
+      line-height: 1.4;
+    }
+
+    .voice-name {
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .voice-location {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .voice-text {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--ink);
+      position: relative;
+    }
+
+    .voice-text::before {
+      content: "“";
+      position: absolute;
+      left: -10px;
+      top: -10px;
+      font-size: 40px;
+      color: var(--cream);
+      font-family: serif;
+      z-index: -1;
+    }
+
+    .news-list {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .news-item {
+      display: grid;
+      gap: 7px;
+      padding: 17px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    @media (min-width: 768px) {
+      .news-item {
+        grid-template-columns: 150px 1fr 100px;
+        align-items: center;
+      }
+    }
+
+    .news-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .news-meta span {
+      padding: 3px 8px;
+      background: var(--soft);
+      border-radius: 999px;
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    .news-title {
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    @media (min-width: 768px) {
+      .insta-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+      }
+    }
+
+    .insta-grid img {
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 6px;
+      background: var(--soft);
+    }
+
+    .contact {
+      padding-bottom: 110px;
+      background: linear-gradient(180deg, var(--soft), #fff);
+    }
+
+    @media (min-width: 768px) {
+      .contact { padding-bottom: 140px; }
+    }
+
+    .contact-box {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 22px 18px;
+      background: var(--green);
+      border-radius: 8px;
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    @media (min-width: 768px) {
+      .contact-box { padding: 40px; }
+    }
+
+    .contact-box h2 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    .contact-box p {
+      color: rgba(255, 255, 255, .82);
+    }
+
+    .tel {
+      margin-top: 18px;
+      padding: 15px;
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .tel strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .tel span {
+      display: block;
+      margin-top: 7px;
+      color: rgba(255, 255, 255, .78);
+      font-size: 12px;
+    }
+
+    .contact-actions {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .contact-actions .button {
+      background: #fff;
+      color: var(--green);
+    }
+
+    .bottom-cta {
+      position: fixed;
+      left: 50%;
+      bottom: 0;
+      z-index: 30;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      width: min(430px, 100%);
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(255, 255, 255, .96);
+      border-top: 1px solid var(--line);
+      transform: translateX(-50%);
+      backdrop-filter: blur(12px);
+    }
+
+    @media (min-width: 768px) {
+      .bottom-cta {
+        width: 1000px;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+
+    .bottom-cta .button {
+      min-height: 44px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 767px) {
+      .header {
+        gap: 10px;
+        padding: 10px 14px;
+      }
+
+      .brand > span:last-child {
+        min-width: 0;
+      }
+
+      .brand-name,
+      .brand-sub {
+        overflow-wrap: anywhere;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 18px 16px 24px;
+      }
+
+      .hero-photo {
+        height: clamp(220px, 66vw, 292px);
+        margin: 0 -16px;
+      }
+
+      .hero-label {
+        right: 12px;
+        left: 12px;
+        bottom: 12px;
+        display: flex;
+        line-height: 1.45;
+        white-space: normal;
+      }
+
+      .hero-copy {
+        margin-top: 16px;
+        padding: 22px 16px 18px;
+      }
+
+      h1 {
+        font-size: clamp(28px, 9vw, 36px);
+        line-height: 1.22;
+      }
+
+      .lead {
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .button {
+        min-width: 0;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+      }
+
+      .bottom-cta {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+<main class="site">
+<header class="header">
+<a aria-label="トップへ" class="brand" href="#top">
+<span class="brand-mark">住</span>
+<span class="">
+<span class="brand-name">杉の杜工務店</span>
+<span class="brand-sub">Since 1946 / 愛媛県松山市</span>
+</span>
+</a>
+<button aria-label="メニュー" class="menu-button" type="button"><span></span></button>
+</header>
+<section aria-label="ファーストビュー" class="hero" id="top">
+<div class="hero-photo"><img alt="https://lh3.googleusercontent.com/aida-public/AB6AXuCiMhI362wFQkyOJ1ehJE2SrJeGCsoCMXgMP2TZ-ITc_3bPhrmq2h-iCo3Z6os0BX4zyGtgNYYrf3bDoojIgcbRZSZjMOPoBid-ewWYr0o2BLRZcplWcRkZs6euiASzuw5gpOuX9vtvH17HH8POQubIRSytBz5gmnXzxOhz_3--Z7BpDllyjjloE9Q0STmTbHcZQ7IA1GHoVNi2O_VV4ny7PWl8ziiGWIjWaIjDGgdVpa-CF53toPCj1AUqbMO0-5HLeG75gQ5i1w" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiMhI362wFQkyOJ1ehJE2SrJeGCsoCMXgMP2TZ-ITc_3bPhrmq2h-iCo3Z6os0BX4zyGtgNYYrf3bDoojIgcbRZSZjMOPoBid-ewWYr0o2BLRZcplWcRkZs6euiASzuw5gpOuX9vtvH17HH8POQubIRSytBz5gmnXzxOhz_3--Z7BpDllyjjloE9Q0STmTbHcZQ7IA1GHoVNi2O_VV4ny7PWl8ziiGWIjWaIjDGgdVpa-CF53toPCj1AUqbMO0-5HLeG75gQ5i1w" class="">
+<div class="hero-label">愛媛県東予・中予エリア密着の住まいづくり</div></div>
+<div class="hero-copy">
+<div class="eyebrow">創業昭和21年</div>
+<h1 class="">住まいと街を、<br>確かな技術で。</h1>
+<p class="lead">松山市・新居浜市・西条市を中心に、リフォームから注文住宅まで幅広く対応。地域に根ざした工務店が、ご家族のこれからに寄り添います。</p>
+<div class="hero-actions">
+<a class="button primary" href="#contact">無料相談</a>
+<a class="button secondary" href="#works">施工実績</a>
+</div>
+<div aria-label="信頼指標" class="trust-row">
+<div class="trust"><strong>75+</strong><span class="">年の実績</span></div>
+<div class="trust"><strong>愛媛</strong><span class="">密着対応</span></div>
+<div class="trust"><strong>一貫</strong><span class="">設計施工</span></div>
+</div>
+</div>
+</section>
+<section id="about">
+<div class="section-head">
+<div class="section-kicker">About</div>
+<h2 class="">人と自然が調和する、やすらぎの空間を。</h2>
+<p class="section-text">住まいの小さなお困りごとから、新築・大型建築まで。長年培った技術と誠実な対応で、安心して任せられる家づくりをお手伝いします。</p>
+</div>
+<div class="about-content">
+<div class="about-photo">
+<img alt="明るい木造住宅のリビング" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk0nG9xLCt_8qWeE5Q8D9GH9-SXUtgZ-kMYVwHM8qqlPHWQ6bfufwWZZmGvICVY2i65K7WrbcgCZH-sqlF0zqbsXC5MUrp9CC-m4PhK70ZQ-Y59MEYXt2QqiJdOlr5sGZ4G0zuUGM7SMiItjPQtsP3MOazL2RicTq4Ux9AcOjPa0ap4fBaecYiu_ZhD2f1TxFaos03SM37Yuu-NAI7l6styYLyUvPD7afPPvZPvcAYleqRW0ytSIZlGaHukarlHyIG2ZzEB-3zMf8h" class="">
+</div>
+<div>
+<p class="message">暮らし方を丁寧に聞き、見えない部分まで確かな品質で仕上げます。</p>
+<p class="section-text" style="text-align: left; margin-top: 20px;">愛媛の風土に合わせた素材選びと、地震に強い構造。私たちは、単に家を建てるだけでなく、その後の暮らしを支え続けるパートナーでありたいと考えています。</p>
+</div>
+</div>
+</section>
+<section class="soft" id="service">
+<div class="section-head">
+<div class="section-kicker">Service</div>
+<h2 class="">事業紹介</h2>
+<p class="section-text">ご相談内容に合わせて、住まいと建物の最適な形をご提案します。</p>
+</div>
+<div class="service-list">
+<article class="service-card">
+<div class="service-icon">改</div>
+<div>
+<h3 class="">住宅リフォーム</h3>
+<p class="">水まわり、内装、耐震、外壁まで暮らしに合わせて改善。</p>
+</div>
+</article>
+<article class="service-card">
+<div class="service-icon">家</div>
+<div>
+<h3 class="">注文住宅</h3>
+<p class="">設計から施工まで一貫対応。家族らしい住まいを形に。</p>
+</div>
+</article>
+<article class="service-card">
+<div class="service-icon">建</div>
+<div>
+<h3 class="">マンション・施設施工</h3>
+<p class="">賃貸住宅、医療・福祉施設、店舗など幅広い建築に対応。</p>
+</div>
+</article>
+</div>
+</section>
+<section id="works">
+<div class="section-head">
+<div class="section-kicker">Works</div>
+<h2 class="">施工実績</h2>
+<p class="section-text">松山市、新居浜市、西条市を中心に、品質と使いやすさを大切に施工しています。</p>
+</div>
+<div class="works">
+<article class="work-card">
+<img alt="落ち着いた住宅の内装施工例" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQbFG8FbCyN17p6gbXoet5dX-rxRj112Bxi1Oy7Wl2W1Uu2ZJ3aEKBWdLXiWScHi4xYd8iK1Qgj2U6uOxe5BpSdh1Ow0AmDeFy2r2nsm3vp3lDlj9zMnFLs03UFrKTnEnue0AhGu0hoiVIXxylwJ8_hhyBg-W8YHuLQKUNfZaxYlJ2MYziIU4vtdVlTqW-GC1T0_s7811CfOFluuBuoVFD-FUkTm8tPMPINXoafh-fzA2GUcElP5T6dI0Ot42j5qxF-90RNWxXToeh" class="">
+<div class="work-body">
+<span class="tag">注文住宅 / 新居浜市</span>
+<h3 class="">自然光が入る木の住まい</h3>
+<p class="">家族が集まるLDKを中心に、収納と動線を整えた新築住宅。</p>
+</div>
+</article>
+<article class="work-card">
+<img alt="北欧スタイルの家 外観" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQJ2ZEYnabe0wPdGaERW-76U84OShS89TNefT0NfA8vxUGeR_AZIG3VTHT_CjJgBaNuAQTu1sKEZ8pJAdsZUAvxxa6q79STAoy-4uK_nnkoKXhItm5DdBAXiyiPtahEVMeKucIfhM3KacOZb5N32wmL6lB8AkE1vquiAuWQgrZpYDTyza1miZGfh5h6X5ltkVsVTNZNd3asuDJyyAdKIxQeRNKj31UtDZ06rnqMKnWB_GpZSUPC9mp7FrVnUQVjnZ3UkaCB5Ga8w" class="">
+<div class="work-body">
+<span class="tag">注文住宅 / 松山市</span>
+<h3 class="">北欧スタイルの家</h3>
+<p class="">自然素材の温もりと、洗練された北欧デザインが調和する、機能美を追求した住まい。</p>
+</div>
+</article>
+</div>
+</section>
+<section class="soft" id="voices">
+<div class="section-head">
+<div class="section-kicker">Voices</div>
+<h2 class="">お客様の声</h2>
+<p class="section-text">実際に施工をお任せいただいたお客様からのメッセージです。</p>
+</div>
+<div class="voices-grid">
+<div class="voice-card">
+<div class="voice-profile">
+<div class="voice-avatar">30</div>
+<div class="voice-info">
+<div class="voice-name">30代 子育て世帯</div>
+<div class="voice-location">愛媛県新居浜市（注文住宅）</div>
+</div>
+</div>
+<div class="voice-text">
+            家事動線が良くなり毎日の負担が減りました。打ち合わせも丁寧で、私たちのこだわりを形にしてくれる姿勢に安心できました。
+          </div>
+</div>
+<div class="voice-card">
+<div class="voice-profile">
+<div class="voice-avatar">50</div>
+<div class="voice-info">
+<div class="voice-name">50代 顧客</div>
+<div class="voice-location">愛媛県松山市（リフォーム）</div>
+</div>
+</div>
+<div class="voice-text">
+            水回りのリフォームをお願いしました。工事中の職人さんの対応も丁寧で、仕上がりも想像以上に満足しています。
+          </div>
+</div>
+</div>
+</section>
+<section id="news" style="margin-top: 80px;" class="">
+<div class="section-head">
+<div class="section-kicker">News</div>
+<h2 class="">おしらせ</h2>
+</div>
+<div class="news-list">
+<a class="news-item" href="#">
+<div class="news-meta">2026.06.10 <span class="">お知らせ</span></div>
+<div class="news-title">【松山・新居浜】住まいの無料相談会を開催します</div>
+</a>
+<a class="news-item" href="#">
+<div class="news-meta">2026.05.22 <span class="">施工実績</span></div>
+<div class="news-title">新居浜市にて注文住宅の施工事例を追加しました</div>
+</a>
+<a class="news-item" href="#">
+<div class="news-meta">2026.04.18 <span class="">採用情報</span></div>
+<div class="news-title">現場管理スタッフ（正社員）を募集しています</div>
+</a>
+</div>
+</section>
+<section class="soft" id="instagram" style="margin-top: 80px;">
+<div class="section-head">
+<div class="section-kicker">Instagram</div>
+<h2 class="">インスタグラム</h2>
+<p class="section-text">現場の様子や施工のこだわりを日々発信しています。</p>
+</div>
+<div class="insta-grid">
+<img alt="住宅外観の投稿" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADqcxsKTt74WhqWm6WaE0-uJcfcSRxhPkMJKcG_q1_X1mFppQyABedmdB8stBicHcRTH2HZjolTqSP3Y5WLGkIDVEvT2I_1hcsLnuafpS6QXn4BbXNTqCrGes2dx0gR0MqWx4scezML7n8dJ-PsTpBWUyQnApWZ-sS9ST8E1Ck--eU39gFpPfCyODZvPkdHJ_yzPCjj6IhxUebr_UFXCJcvqcw_Ww1yhiYh9B01z7rgsoXvhaaNeTvH8J-ORqzr4ElxaGtMcECQeun" class="">
+<img alt="浴室リフォームの投稿" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB19VzWT21Gylyi2wMA2jzA5rhcbIqwpLvpdf4WE2XB_KSqwQ_Nm2C79jqIKCvDmobtN0Q0GLBHkNOzRMdAVLFvgBp_GVo6oeDBkfxEpT5Whumkbd2IjN3ZenIy3_vMDWh4B5mXdxQK2rBN61EPbzHK_9gTkh97QuoFT-WJk75Knh3-K6cs92L-YCSl9ZXtQmNoTqvf7GHg9KZoX3ZPl0cDduG2ZSrI8tMZUlj2lczD2hwq_1sJ_3TH5gUQXuCLIWbKuTR7XMdRWs2X" class="">
+<img alt="キッチン施工の投稿" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI5VK8yqD5sjztBrk7M5ulwtVEcFH8m2QepyuvZj9yLoETaEeyKbX1Am9Y4_KWUbqH7gDoE3FF72RcotBjvbeeGbdjGgv0zD_-PdqeOk1rozpXOAw-vwCcMSlhDdWTWdtitovaJtHa6Nss5nA7OQy_WfpJyMGgDp--EhYLJY3ES97Owz95tM_JOLPo1QP-NqpnNnyMs3pX8QvIskBMvq4M_ftkiFme0RvOKFRPN39U6gwGdbEO7mCAy739A2U9hfj8vaI9OzjdRxcj" class="">
+<img alt="リビング施工の投稿" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOSu_cfmGa8xJ5sDEh6HhQ6bWzKPT3pdf0N6Inxhv5n0BMoCOUdOBrShcKdI2GLD9wUhK83qxLRAxqNp-OMJyOl7MY6U4vaXjya9BblyZkZ0P831tQm_BDettAMpr4kA4lMwVFyocLSwaJRvoEaiuJq0n3dPorocnlTwhl0U0fLLEi7-pJwy9YRmM9S0aWuSX1FKyUqQQLGWKArUyDt2s4zP0CZlZZ6YrST4g1QKRb05Va-mq53GbSRHVyAa5k4Yn5iaLb3zj7jOrP" class="">
+<img alt="木質内装の投稿" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRzlYSk2uMxQ92ELpLSpIfmOZbBdLROoB7m7lhJkAXSQ-OjA9ZkUkXdfqEf-Cv34idQL5mrI7VaUTKzOAwikQDYvX08PkrmK6qC7-xyamj2TwurDZeGc1QBLXXzpko0-Z3UscKehuaQ-mqDAGUzXDsQePV_xQsG4FcDbb_xYq62-FjWe_lZqfJ_9zvVnCIWsnvMnjAIgSj_nzdOP1WMyV0LH_wRYNfYxQPViRAQGAAXGalOOH3u4uyWDykV51Sj2bFznlytxfsN6hg" class="">
+<img alt="洗面スペースの投稿" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqA5yUBtRLND6NYHj8crb89jI5nrId3Uyiop5Z5MQnzg3s2J4f29GlvXRCkFSABALBiZ354-3TGbIRXzGUznfYm5ZsqVVxCcWyAz8zmtnPJh-1NS3CN0T4_9t-pWDJMunP1nBn_jNg2M64wDbcLDyVHOz7wh5BLf4lz-2LBfVCyY206w9z_dW2ehL6uJQUmkO6m0PnvzXBPX4DgabOhGI0qVoP8DZklB1pUwGmXF1BCtpjAGXCdRJ2RGN7Ok99st7zIG78QkrPkKdr" class="">
+</div>
+</section>
+<section class="contact" id="contact" style="margin-top: 80px;">
+<div class="contact-box">
+<div class="section-kicker">Contact</div>
+<h2 class="">お見積もり・ご相談はこちら</h2>
+<p class="section-text" style="color: rgba(255, 255, 255, 0.8);">松山・新居浜・西条エリアのリフォームから新築まで、まずはお気軽にお問い合わせください。</p>
+<div class="tel">
+<strong>0120-88-6059</strong>
+<span class="">受付時間 9:00-17:00 / 土日祝除く</span>
+</div>
+<div class="contact-actions">
+<a class="button line" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24"><path d="M24 10.304c0-5.231-5.383-9.489-12-9.489s-12 4.258-12 9.489c0 4.69 4.27 8.604 10.041 9.358.391.084.923.258 1.058.591.12.301.079.766.038 1.068l-.164 1.025c-.05.301-.241 1.181 1.039.644 1.281-.537 6.905-4.067 9.421-6.966 1.758-2.023 2.567-3.929 2.567-5.72z"></path></svg>
+            LINEで相談する
+          </a>
+<a class="button" href="#">WEBで問い合わせる</a>
+</div>
+</div>
+</section>
+</main>
+<nav aria-label="固定お問い合わせ" class="bottom-cta">
+<a class="button secondary" href="tel:0120886059">資料請求</a>
+<a class="button primary" href="#contact">無料相談</a>
+</nav>
+
+
+
+
+</body></html>
