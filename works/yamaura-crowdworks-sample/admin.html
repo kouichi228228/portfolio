@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>管理画面 | YAMAURA</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+  tailwind.config = { theme: { extend: { colors: { primary: '#a67843' } } } }
+</script>
+<style>
+  body { font-family: 'Noto Sans JP', sans-serif; }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<header class="bg-white border-b px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+  <h1 class="text-lg font-bold text-primary">YAMAURA 管理画面</h1>
+  <a href="index.html" class="text-sm text-gray-500 hover:text-primary underline flex items-center gap-1">
+    <span class="material-icons text-sm">open_in_new</span>サイトを見る
+  </a>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 py-10 space-y-12">
+
+  <div class="bg-yellow-50 border border-yellow-200 text-yellow-800 text-sm rounded p-4">
+    ご注意：このデータはこの端末・このブラウザにのみ保存されます（簡易版）。複数の方で更新したり、機種変更後も保持したい場合は、本格的なCMS（データベース連携）への切替をご相談ください。
+  </div>
+
+  <!-- 施工事例 -->
+  <section>
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-xl font-bold">施工事例</h2>
+      <button id="add-work" class="bg-primary text-white text-sm px-4 py-2 rounded hover:bg-opacity-90">＋ 事例を追加</button>
+    </div>
+    <div id="works-editor" class="space-y-4"></div>
+  </section>
+
+  <!-- お客様の声 -->
+  <section>
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-xl font-bold">お客様の声</h2>
+      <button id="add-voice" class="bg-primary text-white text-sm px-4 py-2 rounded hover:bg-opacity-90">＋ 声を追加</button>
+    </div>
+    <div id="voices-editor" class="space-y-4"></div>
+  </section>
+
+  <div class="flex items-center gap-4 sticky bottom-0 bg-gray-50 py-4 border-t">
+    <button id="save-all" class="bg-primary text-white px-6 py-3 rounded font-bold hover:bg-opacity-90">保存する</button>
+    <span id="save-status" class="text-sm text-green-600"></span>
+    <button id="reset-all" class="text-sm text-gray-400 hover:text-red-500 underline ml-auto">初期データに戻す</button>
+  </div>
+
+</main>
+
+<script>
+  const DEFAULT_WORKS = [
+    { image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC1YN6gxmWF_EeH5cKX-wKQ5Pu2d13a74BrFjSG65hxwBUwhrZiRpgmYZHA5mpL1O2a4W_AVwyONnLUSTskjHgj8LgCHogidR0ElX0FzDFVEHmj9dMwtkKeJqK1VGBACXcg1Y-VEfwOCk1sF_5xgUf7gEz_VlmGovUmphVzaZR9uNF1n7q6paUNyDU5rc5fs7zNawDuQGnyPpA5MC4czZ0nkub4CT-e3oRoW2-S4ZFUiHy5UjVls-y7zjjKGZJD4QVj4VBWB608P7o", label: "Before / After", title: "モダンリビングのある住まい" },
+    { image: "https://lh3.googleusercontent.com/aida-public/AB6AXuADjPCsbssDf1lyRJR2fW-f6VX7tkEIu5IkWzzwVMC66Ii5hldwbozMy4quomf2kssXP_JnblYI3v1G1cDm_yyTSknJmOMZuTLoOEqcAxnmy2dzpVdICUHItTZcPlP2zGcWNX-PIfngcNAvaTdJB1Ni-AEfd81KHV_U63FskS0dCfxLw4rmwcVFD-ZANGQxUKoDsOcC2lhNH4siRi1DlVPCxXMsWTsUNQLFM5AWZtyjRErdU98SA-CBH5ygcOHKphynGhFMpO-t328", label: "Before / After", title: "ナチュラルテイストの空間" },
+    { image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBhSxkTzxHzDklR050l3XPs-YbrKI_MZlh04oDhfI1DhdmjkChq4m57Om3etbWbYb4cFqAgtFly6ZnDbIwuSF6EdBgF-JzS7_EjrxhrH3zX53yHZmkDBnmnLk_maQWlITYSSdsZCCEPKyg0sogWu1HPMomsJt71ZABaLT6we6BihR_s2lIyKJrTQEfKHfS5R8bBXPEDuWA2n6XBifV7pk46xGEn3MDmffFrUYRcnNLWpyFPHFG7rh0IXKe090xcRT8pVR5c6wv_5qE", label: "Before / After", title: "ラグジュアリーホテルライクな空間" }
+  ];
+  const DEFAULT_VOICES = [
+    { name: "不動産会社様（東京都）", comment: "ホームステージングを導入してから、物件の内見数・成約率が大幅に向上しました。対応も丁寧で安心してお任せできます。" },
+    { name: "民泊運営者様（大阪府）", comment: "デザイン性の高い空間に生まれ変わり、レビュー評価も上がり、稼働率も安定しました。またお願いしたいです。" },
+    { name: "オーナー様（愛知県）", comment: "空室期間が長く悩んでいましたが、ホームステージングで印象が変わり、すぐに入居が決まりました。" }
+  ];
+
+  let works = [];
+  let voices = [];
+
+  function loadAll() {
+    try { works = JSON.parse(localStorage.getItem('yamaura_works')) || structuredClone(DEFAULT_WORKS); }
+    catch (e) { works = structuredClone(DEFAULT_WORKS); }
+    try { voices = JSON.parse(localStorage.getItem('yamaura_voices')) || structuredClone(DEFAULT_VOICES); }
+    catch (e) { voices = structuredClone(DEFAULT_VOICES); }
+  }
+
+  function renderWorksEditor() {
+    const el = document.getElementById('works-editor');
+    el.innerHTML = works.map((w, i) => `
+      <div class="bg-white border rounded p-4 space-y-2">
+        <div class="flex gap-4">
+          <img src="${w.image}" class="w-24 h-24 object-cover rounded bg-gray-100" onerror="this.style.opacity=0.2"/>
+          <div class="flex-1 space-y-2">
+            <input data-i="${i}" data-field="title" value="${escapeAttr(w.title)}" placeholder="事例タイトル" class="w-full border rounded px-3 py-2 text-sm"/>
+            <input data-i="${i}" data-field="image" value="${escapeAttr(w.image)}" placeholder="画像URL" class="w-full border rounded px-3 py-2 text-sm"/>
+            <input data-i="${i}" data-field="label" value="${escapeAttr(w.label||'')}" placeholder="ラベル（例: Before / After）" class="w-full border rounded px-3 py-2 text-sm"/>
+          </div>
+          <button data-del="${i}" class="text-gray-400 hover:text-red-500"><span class="material-icons">delete</span></button>
+        </div>
+      </div>
+    `).join('') + (works.length === 0 ? '<p class="text-sm text-gray-400">事例がありません。「＋ 事例を追加」から追加してください。</p>' : '');
+
+    el.querySelectorAll('input[data-field]').forEach(inp => {
+      inp.addEventListener('input', e => {
+        const i = +e.target.dataset.i;
+        works[i][e.target.dataset.field] = e.target.value;
+        if (e.target.dataset.field === 'image') renderWorksEditor();
+      });
+    });
+    el.querySelectorAll('button[data-del]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        works.splice(+e.currentTarget.dataset.del, 1);
+        renderWorksEditor();
+      });
+    });
+  }
+
+  function renderVoicesEditor() {
+    const el = document.getElementById('voices-editor');
+    el.innerHTML = voices.map((v, i) => `
+      <div class="bg-white border rounded p-4 space-y-2">
+        <div class="flex gap-4">
+          <div class="flex-1 space-y-2">
+            <input data-i="${i}" data-field="name" value="${escapeAttr(v.name)}" placeholder="お客様（属性・地域など）" class="w-full border rounded px-3 py-2 text-sm"/>
+            <textarea data-i="${i}" data-field="comment" placeholder="コメント本文" class="w-full border rounded px-3 py-2 text-sm" rows="2">${escapeAttr(v.comment)}</textarea>
+          </div>
+          <button data-del="${i}" class="text-gray-400 hover:text-red-500"><span class="material-icons">delete</span></button>
+        </div>
+      </div>
+    `).join('') + (voices.length === 0 ? '<p class="text-sm text-gray-400">声がありません。「＋ 声を追加」から追加してください。</p>' : '');
+
+    el.querySelectorAll('[data-field]').forEach(inp => {
+      inp.addEventListener('input', e => {
+        const i = +e.target.dataset.i;
+        voices[i][e.target.dataset.field] = e.target.value;
+      });
+    });
+    el.querySelectorAll('button[data-del]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        voices.splice(+e.currentTarget.dataset.del, 1);
+        renderVoicesEditor();
+      });
+    });
+  }
+
+  function escapeAttr(s) {
+    return String(s || '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+  }
+
+  document.getElementById('add-work').addEventListener('click', () => {
+    works.push({ image: '', label: 'Before / After', title: '新しい事例' });
+    renderWorksEditor();
+  });
+  document.getElementById('add-voice').addEventListener('click', () => {
+    voices.push({ name: 'お客様名', comment: 'コメントを入力してください。' });
+    renderVoicesEditor();
+  });
+  document.getElementById('save-all').addEventListener('click', () => {
+    localStorage.setItem('yamaura_works', JSON.stringify(works));
+    localStorage.setItem('yamaura_voices', JSON.stringify(voices));
+    const status = document.getElementById('save-status');
+    status.textContent = '保存しました（' + new Date().toLocaleString('ja-JP') + '）';
+    setTimeout(() => status.textContent = '', 4000);
+  });
+  document.getElementById('reset-all').addEventListener('click', () => {
+    if (!confirm('初期データに戻します。よろしいですか？')) return;
+    works = structuredClone(DEFAULT_WORKS);
+    voices = structuredClone(DEFAULT_VOICES);
+    renderWorksEditor();
+    renderVoicesEditor();
+  });
+
+  loadAll();
+  renderWorksEditor();
+  renderVoicesEditor();
+</script>
+</body>
+</html>

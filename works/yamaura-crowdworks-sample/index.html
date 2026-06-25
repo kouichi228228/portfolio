@@ -1,0 +1,572 @@
+﻿<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>YAMAURA | 空間デザイン・ホームステージング</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Playfair Display & Noto Sans JP -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#a67843',
+            surface: '#faf8f5',
+            'surface-dim': '#dcd9d9',
+            'surface-container-lowest': '#ffffff',
+            'on-surface': '#2c2c2c',
+            'on-surface-variant': '#666666',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          },
+          spacing: {
+            'margin-desktop': '5%',
+            'section-padding': '5rem',
+            'unit-xl': '2.5rem',
+            'unit-lg': '1.5rem',
+          },
+          maxWidth: {
+            'container-max': '1280px',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-animations">
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    .reveal {
+      opacity: 0;
+    }
+    .reveal.active {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    .scroll-indicator::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 60px;
+      background: white;
+      transform: translateX(-50%);
+    }
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    }
+    html,
+    body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    .site-footer {
+      position: relative;
+      left: 50%;
+      width: 100vw;
+      max-width: none;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      box-sizing: border-box;
+    }
+    .site-footer-inner {
+      width: 100%;
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden bg-surface text-on-surface font-sans selection:bg-primary selection:text-white">
+<!-- BEGIN: TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/30 h-20 flex justify-between items-center px-margin-desktop max-w-container-max mx-auto" data-purpose="main-header">
+<div class="flex items-center gap-4">
+<button class="p-2 lg:hidden" id="menu-toggle">
+<span class="material-icons text-primary">menu</span>
+</button>
+<div class="font-serif text-2xl tracking-widest text-on-surface uppercase font-bold">YAMAURA</div>
+</div>
+<nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
+<a class="hover:text-primary transition-colors" href="#">トップ</a>
+<a class="hover:text-primary transition-colors" href="#">サービス</a>
+<a class="hover:text-primary transition-colors" href="#">施工事例</a>
+<a class="hover:text-primary transition-colors" href="#">私たちについて</a>
+<a class="hover:text-primary transition-colors" href="#">ご利用の流れ</a>
+<a class="hover:text-primary transition-colors" href="#">お客様の声</a>
+</nav>
+<a class="bg-primary text-white px-6 py-2 h-full flex items-center gap-2 hover:bg-opacity-90 transition-all font-bold" href="#">
+<span class="material-icons text-sm">mail</span>
+      お問い合わせ
+    </a>
+</header>
+<!-- END: TopAppBar -->
+<main>
+<!-- BEGIN: Hero -->
+<section class="relative h-screen flex items-center overflow-hidden">
+<img alt="Modern luxury living room" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNxtqT_2Rd0EX9gQp6W9ZBDlOIqGmaPBD7cAD4-doysVypp3OZRiHWymOfWNzztU0uyX-_xN1r9OCyN0gReNVfMUXD6rcqwacY5wT67M9x1O-6ry9XmdO2w1gYPspt3tppKysyJY4O5g6LE3N7hZG4QKdykpmlcnFTY4d5QrKMcFGPbDhCc7Arukhd8uAV34eh4jmgl683LhYtkxjI75XpdZ78wgyhTz3OdWPxw7G89WaEJn6yE7-VsAetQQbD1-NzlLNK_o3x04g"/>
+<div class="absolute inset-0 bg-black/40"></div>
+<div class="relative z-10 w-full px-margin-desktop max-w-container-max mx-auto text-white">
+<div class="animate-fade-in-up">
+<h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight">Space Design<br/>That Inspires.</h1>
+<p class="text-lg md:text-xl mb-10 font-light tracking-wide leading-relaxed">
+            住まいの魅力を最大限に引き出す<br/>
+            空間デザイン・ホームステージング
+          </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary hover:bg-opacity-90 text-white px-10 py-4 text-center transition-all flex items-center justify-center gap-3" href="#">
+              施工事例を見る <span>→</span>
+</a>
+<a class="bg-transparent border border-white hover:bg-white/10 text-white px-10 py-4 text-center transition-all" href="#">
+              お問い合わせ
+            </a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+<span class="text-[10px] tracking-widest text-white uppercase">Scroll</span>
+<div class="w-[1px] h-12 bg-white/50 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full bg-white animate-bounce"></div>
+</div>
+</div>
+</section>
+<!-- END: Hero -->
+<!-- BEGIN: About -->
+<section class="py-section-padding px-margin-desktop max-w-container-max mx-auto reveal" id="about">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<img alt="Luxury dining room" class="w-full h-auto rounded-sm shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtk92sTSNmY38BlAMyE0xwly_CKQVHiqY8yznJ68PxTfVHmTq3w_aTdhd7p0IWPTitnnXP-2cJ_fL1H8MTHP2nLTs3AuFtFoVzgfB40ZyGKDBSZC3LxefP67-ZcqJUbARJ1BZ603GAdiO6wHLGcoMrld9ybr7AjX0Z_R6uaLIBFnXEZ8Ho8jRLe86h26RqPwv4oPRYewxJ0bixocNbJpVi6538GjYTxaIyLz9zg9ZrqU7QXMMvFSHGsCBSbf_R1erCavxJxv0pNVQ"/>
+</div>
+<div class="space-y-6">
+<span class="text-primary font-serif tracking-[0.2em] text-sm uppercase">About</span>
+<h2 class="text-3xl md:text-4xl font-bold leading-snug">空間をデザインし、価値を高める。</h2>
+<p class="text-on-surface-variant leading-relaxed">
+            YAMAURAは、ホームステージング・インテリアコーディネート・民泊デザインを<br/>
+            通して、住まいの魅力を最大限に引き出します。<br/>
+            不動産の販売・賃貸・民泊運営など、それぞれの目的に合わせて、<br/>
+            「ここに住みたい」と思える空間をトータルでご提案します。
+          </p>
+<a class="inline-flex items-center gap-4 border border-on-surface/20 px-8 py-3 hover:bg-primary hover:text-white transition-all duration-300" href="#">
+            私たちについて <span>→</span>
+</a>
+</div>
+</div>
+</section>
+<!-- END: About -->
+<!-- BEGIN: Service -->
+<section class="py-section-padding bg-white" id="services">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-serif tracking-widest uppercase reveal">Service</h2>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface rounded-sm overflow-hidden hover-lift reveal">
+<img alt="Home Staging" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhGEuINivR8gYFSGbnDH2VZbVlL6qNmRnOlndfCzl72RHu58zKNPLm36px06bT2iEkMyFLqAv0izhsUR-uugSV6cYvjtTK4V5kFsafxXV6cHOMwlz1l3FgSNO1FHkP9b9VbDi1d_Yso5sctzPcmTb6Ioz_eavruZuXaT2KK-mKX8rwBzSlrRFOjksmZm5uGBtmhaJ993DtuRvRlt5cI4Iv1iTBFC1wqSdLTsD2hONb-NpaDFISPSG7eQbMRPLgHDnKXFbI27NHN-E"/>
+<div class="p-6 text-center">
+<div class="w-12 h-12 border border-primary/30 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-icons text-primary">home</span>
+</div>
+<h3 class="font-bold text-lg mb-3">ホームステージング</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">物件の魅力を最大限に引き出し、早期成約をサポートします。</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface rounded-sm overflow-hidden hover-lift reveal">
+<img alt="Interior Coordination" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW1mVTTJC5-ThOf1LX07KnpTA3xE4JGQEj6MEJZ4kzb0zW1PhpJpdGdXIJlidSOEpqKrghSx2Zzf7VshxM2QsA3NMJkJKNjgvhLtVzYA96DVp7wziNzEKcXzur52Hswe2lXXjsDU_PP5S4-oDV_sR7VJwmIIJ3mXv9BmKTGoXY1cTq2XYxcHUfbFJvzlOAwAD5Wrf01nyuKeb5O8G5tzUNHsS7lwCQnb0MwIl48ElGCIe3nW-y-_qAJNe4n2Fum5gBel2lsWEon7g"/>
+<div class="p-6 text-center">
+<div class="w-12 h-12 border border-primary/30 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-icons text-primary">chair</span>
+</div>
+<h3 class="font-bold text-lg mb-3">インテリアコーディネート</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">理想の暮らしを叶える空間づくりをご提案します。</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface rounded-sm overflow-hidden hover-lift reveal">
+<img alt="Vacation Rental" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK_T159Cxiud-BV6qTocsqkuZK5ul2hzrF-LR-jEzTV5Qr7U1C8BsRuUiVkLwGmk8XRtVcJgH5RMkEnxTLszGHG3PovhHyboMoZytFBsHw4rviDMjkQ4EciRK0gUFjP9aWxiX0JIsq-leewr-Q6kOtETbhkNq1e1zxkIEsa-Q_O6xFyFIlwf1SUTe5tk7W0Zv7RBnwL6E2d7puuqUzdyIjw7mIZ9jFM1h99idpVlbWsA-YvgC9qENDIhb43Ou6xjWroybKBAXtyUg"/>
+<div class="p-6 text-center">
+<div class="w-12 h-12 border border-primary/30 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-icons text-primary">bed</span>
+</div>
+<h3 class="font-bold text-lg mb-3">民泊デザイン</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">宿泊者に選ばれる空間で、収益向上をサポートします。</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface rounded-sm overflow-hidden hover-lift reveal">
+<img alt="Furniture Rental" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmJCGp7FaOmoD80dE4goraAM3jOtIlb2Vrj38w4booIH28E_q4edPum3w1Jk05MjtJoxZmb1VMbiXIh3UGSr07syIQL61ey8KbPAelrfO-ECYkPPqGQv23IRShn4nd7di-St_FST6K-UgUCgWwyzxd3uR3CxXHUjbNHI6PKGgaAjvlIfUbSogfJvsbBEHhQUGtvJP1YTygE7LWf-Usay2rEGpEKl6vtQn7L9uLwtp2efNuO5_ycPVS6lSiZAdGBsvQu2lT-t49puI"/>
+<div class="p-6 text-center">
+<div class="w-12 h-12 border border-primary/30 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-icons text-primary">inventory</span>
+</div>
+<h3 class="font-bold text-lg mb-3">家具レンタル・販売</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">シーンに合わせた家具をレンタル・販売しています。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Service -->
+<!-- BEGIN: Works -->
+<section class="py-section-padding px-margin-desktop max-w-container-max mx-auto" id="works">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-serif tracking-widest uppercase reveal">Works</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8" id="works-list"></div>
+<div class="mt-12 text-right">
+<a class="inline-flex items-center gap-2 text-sm font-bold hover:text-primary transition-colors" href="#">
+          すべての施工事例を見る <span class="material-icons text-sm">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- END: Works -->
+<!-- BEGIN: Strength -->
+<section class="py-section-padding bg-surface-dim/20">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-serif tracking-widest uppercase reveal">Strength</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center reveal">
+<span class="block text-primary font-serif text-3xl mb-2">01</span>
+<div class="w-12 h-12 mx-auto mb-4">
+<span class="material-icons text-primary text-4xl">domain</span>
+</div>
+<h4 class="font-bold mb-2">豊富な実績</h4>
+<p class="text-xs text-on-surface-variant">住宅・民泊・モデルルームなど多種多様な実績があります。</p>
+</div>
+<div class="text-center reveal">
+<span class="block text-primary font-serif text-3xl mb-2">02</span>
+<div class="w-12 h-12 mx-auto mb-4">
+<span class="material-icons text-primary text-4xl">public</span>
+</div>
+<h4 class="font-bold mb-2">全国対応</h4>
+<p class="text-xs text-on-surface-variant">全国エリアでの対応が可能。遠方の案件もお任せください。</p>
+</div>
+<div class="text-center reveal">
+<span class="block text-primary font-serif text-3xl mb-2">03</span>
+<div class="w-12 h-12 mx-auto mb-4">
+<span class="material-icons text-primary text-4xl">psychology</span>
+</div>
+<h4 class="font-bold mb-2">プロによる提案力</h4>
+<p class="text-xs text-on-surface-variant">経験豊富なプロが、最適なプランをご提案します。</p>
+</div>
+<div class="text-center reveal">
+<span class="block text-primary font-serif text-3xl mb-2">04</span>
+<div class="w-12 h-12 mx-auto mb-4">
+<span class="material-icons text-primary text-4xl">shopping_cart</span>
+</div>
+<h4 class="font-bold mb-2">家具搬入まで対応</h4>
+<p class="text-xs text-on-surface-variant">プランニングから家具の搬入・設置までワンストップで対応。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Strength -->
+<!-- BEGIN: Flow -->
+<section class="py-section-padding px-margin-desktop max-w-container-max mx-auto" id="process">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-serif tracking-widest uppercase reveal">Flow</h2>
+</div>
+<div class="relative">
+<!-- Connecting Line -->
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-primary/20 -translate-y-1/2 hidden md:block"></div>
+<div class="grid grid-cols-2 md:grid-cols-6 gap-8 relative z-10">
+<div class="text-center reveal">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-primary/20">
+<span class="text-primary font-serif">01</span>
+</div>
+<h4 class="font-bold text-sm mb-2">お問い合わせ</h4>
+<p class="text-[10px] text-on-surface-variant">フォームまたはお電話にてお気軽にご相談ください。</p>
+</div>
+<div class="text-center reveal">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-primary/20">
+<span class="text-primary font-serif">02</span>
+</div>
+<h4 class="font-bold text-sm mb-2">ヒアリング</h4>
+<p class="text-[10px] text-on-surface-variant">ご要望や物件の状況を詳しくお伺いします。</p>
+</div>
+<div class="text-center reveal">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-primary/20">
+<span class="text-primary font-serif">03</span>
+</div>
+<h4 class="font-bold text-sm mb-2">プラン提案・お見積り</h4>
+<p class="text-[10px] text-on-surface-variant">最適なプランとお見積りをご提案します。</p>
+</div>
+<div class="text-center reveal">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-primary/20">
+<span class="text-primary font-serif">04</span>
+</div>
+<h4 class="font-bold text-sm mb-2">ご契約・準備</h4>
+<p class="text-[10px] text-on-surface-variant">ご契約後、スケジュール調整・準備を行います。</p>
+</div>
+<div class="text-center reveal">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-primary/20">
+<span class="text-primary font-serif">05</span>
+</div>
+<h4 class="font-bold text-sm mb-2">施工・設置</h4>
+<p class="text-[10px] text-on-surface-variant">家具の搬入・設置まで丁寧に対応します。</p>
+</div>
+<div class="text-center reveal">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-primary/20">
+<span class="text-primary font-serif">06</span>
+</div>
+<h4 class="font-bold text-sm mb-2">完成・フォロー</h4>
+<p class="text-[10px] text-on-surface-variant">設置後のサポートもお任せください。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Flow -->
+<!-- BEGIN: Voice -->
+<section class="py-section-padding bg-surface">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-serif tracking-widest uppercase reveal">Voice</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8" id="voice-list"></div>
+</div>
+</section>
+<!-- END: Voice -->
+<!-- BEGIN: CTA Section -->
+<section class="relative py-24 overflow-hidden">
+<div class="absolute inset-0 bg-black/60 z-10"></div>
+<img alt="Contact Background" class="absolute inset-0 w-full h-full object-cover grayscale opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNxtqT_2Rd0EX9gQp6W9ZBDlOIqGmaPBD7cAD4-doysVypp3OZRiHWymOfWNzztU0uyX-_xN1r9OCyN0gReNVfMUXD6rcqwacY5wT67M9x1O-6ry9XmdO2w1gYPspt3tppKysyJY4O5g6LE3N7hZG4QKdykpmlcnFTY4d5QrKMcFGPbDhCc7Arukhd8uAV34eh4jmgl683LhYtkxjI75XpdZ78wgyhTz3OdWPxw7G89WaEJn6yE7-VsAetQQbD1-NzlLNK_o3x04g"/>
+<div class="relative z-20 px-margin-desktop max-w-container-max mx-auto text-white">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="reveal">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">まずはお気軽にご相談ください</h2>
+<p class="opacity-80">空間の価値を最大限に引き出すお手伝いをいたします。</p>
+</div>
+<div class="space-y-6 reveal">
+<a class="flex items-center justify-between bg-primary text-white p-6 w-full hover:bg-opacity-90 transition-all font-bold" href="#">
+<div class="flex items-center gap-4">
+<span class="material-icons">mail</span>
+<span>お問い合わせはこちら</span>
+</div>
+<span class="material-icons">arrow_forward</span>
+</a>
+<div class="flex flex-col items-start gap-1">
+<a class="text-3xl font-serif hover:text-primary transition-colors" href="tel:03-1234-5678">03-1234-5678</a>
+<span class="text-sm opacity-60">受付時間 10:00-18:00（土日祝除く）</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CTA Section -->
+</main>
+<!-- BEGIN: Footer -->
+<footer
+  class="site-footer w-full bg-surface py-unit-xl border-t border-outline-variant/30"
+  data-purpose="site-footer"
+>
+  <div class="site-footer-inner mx-auto w-full max-w-container-max px-margin-desktop">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="font-serif text-xl tracking-widest text-primary uppercase">
+        YAMAURA
+      </div>
+
+      <div class="flex gap-8 text-sm text-on-surface-variant">
+        <a class="hover:text-primary underline transition-all" href="#">プライバシーポリシー</a>
+        <a class="hover:text-primary underline transition-all" href="#">利用規約</a>
+        <a class="hover:text-primary underline transition-all" href="#contact">お問い合わせ</a>
+      </div>
+
+      <div class="flex flex-col items-center md:items-end gap-1">
+        <p class="text-xs opacity-50">
+          © 2026 YAMAURA INTERIOR DESIGN. ALL RIGHTS RESERVED.
+        </p>
+        <a class="text-[10px] text-on-surface-variant/60 hover:text-primary underline" href="admin.html">
+          管理画面（施工事例・お客様の声の更新）
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- END: Footer -->
+<!-- BEGIN: Scripts -->
+<script data-purpose="content-data">
+    // 施工事例・お客様の声の初期データ（管理画面が未編集の場合に表示される）
+    const DEFAULT_WORKS = [
+      { image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC1YN6gxmWF_EeH5cKX-wKQ5Pu2d13a74BrFjSG65hxwBUwhrZiRpgmYZHA5mpL1O2a4W_AVwyONnLUSTskjHgj8LgCHogidR0ElX0FzDFVEHmj9dMwtkKeJqK1VGBACXcg1Y-VEfwOCk1sF_5xgUf7gEz_VlmGovUmphVzaZR9uNF1n7q6paUNyDU5rc5fs7zNawDuQGnyPpA5MC4czZ0nkub4CT-e3oRoW2-S4ZFUiHy5UjVls-y7zjjKGZJD4QVj4VBWB608P7o", label: "Before / After", title: "モダンリビングのある住まい" },
+      { image: "https://lh3.googleusercontent.com/aida-public/AB6AXuADjPCsbssDf1lyRJR2fW-f6VX7tkEIu5IkWzzwVMC66Ii5hldwbozMy4quomf2kssXP_JnblYI3v1G1cDm_yyTSknJmOMZuTLoOEqcAxnmy2dzpVdICUHItTZcPlP2zGcWNX-PIfngcNAvaTdJB1Ni-AEfd81KHV_U63FskS0dCfxLw4rmwcVFD-ZANGQxUKoDsOcC2lhNH4siRi1DlVPCxXMsWTsUNQLFM5AWZtyjRErdU98SA-CBH5ygcOHKphynGhFMpO-t328", label: "Before / After", title: "ナチュラルテイストの空間" },
+      { image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBhSxkTzxHzDklR050l3XPs-YbrKI_MZlh04oDhfI1DhdmjkChq4m57Om3etbWbYb4cFqAgtFly6ZnDbIwuSF6EdBgF-JzS7_EjrxhrH3zX53yHZmkDBnmnLk_maQWlITYSSdsZCCEPKyg0sogWu1HPMomsJt71ZABaLT6we6BihR_s2lIyKJrTQEfKHfS5R8bBXPEDuWA2n6XBifV7pk46xGEn3MDmffFrUYRcnNLWpyFPHFG7rh0IXKe090xcRT8pVR5c6wv_5qE", label: "Before / After", title: "ラグジュアリーホテルライクな空間" }
+    ];
+    const DEFAULT_VOICES = [
+      { name: "不動産会社様（東京都）", comment: "ホームステージングを導入してから、物件の内見数・成約率が大幅に向上しました。対応も丁寧で安心してお任せできます。" },
+      { name: "民泊運営者様（大阪府）", comment: "デザイン性の高い空間に生まれ変わり、レビュー評価も上がり、稼働率も安定しました。またお願いしたいです。" },
+      { name: "オーナー様（愛知県）", comment: "空室期間が長く悩んでいましたが、ホームステージングで印象が変わり、すぐに入居が決まりました。" }
+    ];
+
+    function loadWorks() {
+      try {
+        const raw = localStorage.getItem('yamaura_works');
+        return raw ? JSON.parse(raw) : DEFAULT_WORKS;
+      } catch (e) { return DEFAULT_WORKS; }
+    }
+    function loadVoices() {
+      try {
+        const raw = localStorage.getItem('yamaura_voices');
+        return raw ? JSON.parse(raw) : DEFAULT_VOICES;
+      } catch (e) { return DEFAULT_VOICES; }
+    }
+
+    function renderWorks() {
+      const container = document.getElementById('works-list');
+      if (!container) return;
+      const works = loadWorks();
+      container.innerHTML = works.map(w => `
+        <div class="group cursor-pointer reveal active">
+          <div class="relative overflow-hidden mb-4">
+            <img alt="${w.title}" class="w-full transition-transform duration-700 group-hover:scale-110" src="${w.image}"/>
+            <div class="absolute bottom-4 left-4 bg-white/90 px-3 py-1 text-[10px] tracking-tighter">${w.label || ''}</div>
+          </div>
+          <h3 class="font-bold border-b border-primary/20 pb-4">${w.title}</h3>
+        </div>
+      `).join('');
+    }
+
+    function renderVoices() {
+      const container = document.getElementById('voice-list');
+      if (!container) return;
+      const voices = loadVoices();
+      container.innerHTML = voices.map(v => `
+        <div class="bg-white p-8 rounded shadow-sm reveal active">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-surface-dim rounded-full flex items-center justify-center">
+              <span class="material-icons text-on-surface-variant">person</span>
+            </div>
+            <span class="text-xs font-bold">${v.name}</span>
+          </div>
+          <p class="text-sm leading-relaxed text-on-surface-variant">${v.comment}</p>
+        </div>
+      `).join('');
+    }
+
+    renderWorks();
+    renderVoices();
+  </script>
+<script data-purpose="scroll-reveal">
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+<script data-purpose="mobile-menu-and-contact-form">
+    (() => {
+      const navItems = [
+        ['トップ', '#'],
+        ['サービス', '#services'],
+        ['施工事例', '#works'],
+        ['私たちについて', '#about'],
+        ['ご利用の流れ', '#process'],
+        ['お客様の声', '#voice'],
+      ];
+
+      const header = document.querySelector('[data-purpose="main-header"]');
+      const menuButton = document.getElementById('menu-toggle');
+      const desktopLinks = header ? header.querySelectorAll('nav a') : [];
+
+      desktopLinks.forEach((link, index) => {
+        if (navItems[index]) {
+          link.href = navItems[index][1];
+          link.textContent = navItems[index][0];
+        }
+      });
+
+      if (header && menuButton && !document.getElementById('mobile-menu')) {
+        menuButton.setAttribute('type', 'button');
+        menuButton.setAttribute('aria-controls', 'mobile-menu');
+        menuButton.setAttribute('aria-expanded', 'false');
+
+        const mobileMenu = document.createElement('nav');
+        mobileMenu.id = 'mobile-menu';
+        mobileMenu.className = 'hidden fixed left-0 right-0 top-20 z-40 bg-white border-b border-surface-dim px-margin-desktop py-4 shadow-lg lg:hidden';
+        mobileMenu.innerHTML = navItems.map(([label, href]) => (
+          `<a class="block py-3 text-sm font-medium border-b border-surface-dim/40 last:border-b-0 hover:text-primary" href="${href}">${label}</a>`
+        )).join('');
+        header.insertAdjacentElement('afterend', mobileMenu);
+
+        menuButton.addEventListener('click', () => {
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden', isOpen);
+          menuButton.setAttribute('aria-expanded', String(!isOpen));
+        });
+
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuButton.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      document.querySelectorAll('a[href="#"]').forEach((link) => {
+        const text = link.textContent.replace(/\s+/g, '');
+        if (text.includes('お問い合わせ')) link.href = '#contact';
+        if (text.includes('施工事例')) link.href = '#works';
+      });
+
+      const contactSection = Array.from(document.querySelectorAll('section')).find((section) =>
+        section.textContent.includes('03-1234-5678')
+      );
+      if (!contactSection || document.getElementById('contact-form')) return;
+
+      contactSection.id = 'contact';
+      const contactGrid = contactSection.querySelector('.grid');
+      if (!contactGrid) return;
+
+      const formWrap = document.createElement('div');
+      formWrap.className = 'bg-white text-on-surface p-6 md:p-8 reveal active';
+      formWrap.innerHTML = `
+        <form id="contact-form" class="space-y-4" action="mailto:mizobuchi.web.create@gmail.com" method="post" enctype="text/plain">
+          <div>
+            <label class="block text-sm font-bold mb-2" for="name">お名前</label>
+            <input class="w-full border border-surface-dim px-4 py-3 focus:border-primary focus:ring-primary" id="name" name="お名前" type="text" autocomplete="name" required>
+          </div>
+          <div>
+            <label class="block text-sm font-bold mb-2" for="email">メールアドレス</label>
+            <input class="w-full border border-surface-dim px-4 py-3 focus:border-primary focus:ring-primary" id="email" name="メールアドレス" type="email" autocomplete="email" required>
+          </div>
+          <div>
+            <label class="block text-sm font-bold mb-2" for="message">ご相談内容</label>
+            <textarea class="w-full border border-surface-dim px-4 py-3 focus:border-primary focus:ring-primary" id="message" name="ご相談内容" rows="5" required></textarea>
+          </div>
+          <button class="w-full bg-primary text-white py-4 font-bold hover:bg-opacity-90 transition-all" type="submit">送信する</button>
+          <p class="text-xs text-on-surface-variant leading-relaxed">内容を確認後、担当者よりご連絡いたします。物件写真や間取り図がある場合は、初回相談時にあわせてご共有ください。</p>
+        </form>
+      `;
+      contactGrid.appendChild(formWrap);
+    })();
+  </script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<!-- END: Scripts -->
+</body></html>
